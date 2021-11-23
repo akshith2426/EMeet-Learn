@@ -39,7 +39,7 @@ const Teams = () => {
                         variant="h6" 
                         noWrap
                     >
-                        All Teams
+                        All Channels
                     </Typography>
                     <div className={classes.grow} />
                     <div className={classes.sectionDesktop}>  
@@ -48,10 +48,10 @@ const Teams = () => {
                                 <SettingsIcon />
                             </IconButton>
                         </Tooltip>
-                        <Tooltip title='Create a team' placement='bottom'>
+                        <Tooltip title='Create Channel' placement='bottom'>
                             <IconButton aria-label="settings" className={classes.menuButton} href='/create-team'>
                                 <GroupAddIcon/>
-                                <Typography variant='body2'>Create a team</Typography>
+                                <Typography variant='body2'>Create Channel</Typography>
                             </IconButton>
                         </Tooltip>
                     </div>

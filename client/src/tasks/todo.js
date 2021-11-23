@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { List, ListItem, ListItemText, Button, Modal } from "@material-ui/core";
+import { List, ListItem, ListItemText, Button, Modal,Divider } from "@material-ui/core";
 import { db } from '../firebase';
 import useStyles from './styles';
 import { useAuth } from '../contexts/AuthContext';
@@ -31,7 +31,7 @@ const Todo = (props) => {
       //PUSHING IN USER ACTIVITY
       db.collection("users").doc(currentUser.uid).collection("activity")
       .add({
-          activity: `You completed the task: ${props.todo.todo}!`,
+          activity: `You Completed The Task : ${props.todo.todo}!`,
           doneAt: new Date()
       })
 
@@ -55,16 +55,14 @@ const Todo = (props) => {
             onClick={updateTodo}
             className={classes.buttonUpload}
           >
-            Upload
+            Submit Changes
           </Button>
         </div>
       </Modal>
 
       <List className={classes.todoList}>
         <ListItem>
-          <ListItemText primary={props.todo.todo} secondary="Uploaded Task 🤞"  />
-        </ListItem>
-
+          <ListItemText primary={props.todo.todo}   />
         {/* DONE BUTTON */}
         <Button
           variant="contained"
@@ -84,7 +82,9 @@ const Todo = (props) => {
           endIcon={<EditIcon>send</EditIcon>}
         >
           Edit
-        </Button>
+          </Button>
+        </ListItem>
+        <Divider />
       </List>
     </>
   );

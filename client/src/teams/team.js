@@ -118,12 +118,12 @@ const Team = (props) => {
     //PUSHING IN USER ACTIVITY
     db.collection("users").doc(currentUser.uid).collection("activity")
     .add({
-        activity: `You created a meeting!`,
+        activity: `You Created A Meeting !`,
         doneAt: new Date()
     })
 
     history.push(`/room/${id}`);
-    alert(`Copy your meeting code : ${id}`);
+    alert(`Copy Your Meeting Code : ${id}`);
   }
 
 
@@ -147,7 +147,7 @@ const Team = (props) => {
     //PUSHING IN USER ACTIVITY
     db.collection("users").doc(currentUser.uid).collection("activity")
     .add({
-        activity: `You scheduled a meeting!`,
+        activity: `You Scheduled A Meeting !`,
         doneAt: new Date()
     })
 
@@ -185,7 +185,7 @@ const Team = (props) => {
       <div className={classes.toolbar} />
       <List>
         <ListItem>
-          <Button href='/teams' startIcon={<ArrowBackIosIcon/>}>All Teams</Button>
+          <Button href='/teams' startIcon={<ArrowBackIosIcon/>}>All Channels</Button>
         </ListItem>
         {
           teams.map(
@@ -322,7 +322,7 @@ const Team = (props) => {
               <KeyboardIcon />
             </div>
             <InputBase
-              placeholder="Enter code to join"
+              placeholder="Enter The Code To Join"
               value={code}
               onChange = {(e)=>setCode(e.target.value)}
               classes={{
@@ -334,7 +334,7 @@ const Team = (props) => {
           </div>
           <Button  
             type='submit'
-            style={{ display: 'none' }}>
+            style={{ display: 'none' ,backgroundColor: '#FEDB01', color: '#ffffff' }}>
             Join
           </Button>
           </form>

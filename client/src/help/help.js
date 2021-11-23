@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { db } from '../firebase';
 import { useAuth } from '../contexts/AuthContext';
 import useStyles from './styles';
-import { Typography, List, ListItem, ListItemAvatar, Avatar, ListItemText } from '@material-ui/core';
+import { Typography,Button, List, ListItem, ListItemAvatar, Avatar, ListItemText } from '@material-ui/core';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MessageIcon from '@material-ui/icons/Message';
 import GroupIcon from '@material-ui/icons/Group';
@@ -12,7 +12,7 @@ import HelpIcon from '@material-ui/icons/Help';
 import Speech from 'react-speech';
 
 const Help = () => {
-
+    
     const classes = useStyles();
     const { currentUser } = useAuth();
     const [users, setUsers] = useState([]);
@@ -33,25 +33,14 @@ const Help = () => {
                 variant='h4'
                 className={classes.title}
             >
-                TEAMS HELP
+                Help & Support
             </Typography>
             <Typography
                 className={classes.title}
             >
-                Hey &nbsp;
-                {
-                    users.map(
-                        (user)=>{
-                            if(user.uid === currentUser.uid)
-                                return (user.name)
-                        }
-                    )
-                }!
-                Welcome to Teams! Here's a quick guide for you!
+                Welcome to E-Meet & Learn ! Here's a quick guide for you!
             </Typography>
-
             <Speech 
-                style={{ marginLeft: '25vw',padding:'5px' }}
                 textAsButton={true} 
                 displayText="Click to listen" 
                 text={text}
@@ -62,66 +51,58 @@ const Help = () => {
             <List className={classes.listRoot}>
                 <ListItem>
                     <ListItemAvatar>
-                        <Avatar>
-                            <NotificationsIcon />
+                        <Avatar style={{ backgroundColor: "#F75F4A" }}>
+                            <NotificationsIcon  />
                         </Avatar>
                     </ListItemAvatar>
-                    <ListItemText primary="Activity" secondary="You can view all your activities" />
+                    <ListItemText primary={<Typography variant="h6">Activity</Typography>} secondary="You can view all your activities" />
                 </ListItem>
 
                 <ListItem>
                     <ListItemAvatar>
-                        <Avatar>
+                        <Avatar style={{ backgroundColor: "#F75F4A" }}>
                             <MessageIcon />
                         </Avatar>
                     </ListItemAvatar>
-                    <ListItemText primary="Community Chat" secondary="You can communicate with all users of this app" />
+                    <ListItemText primary={<Typography variant="h6">Community Chat</Typography>} secondary="You can communicate with all users of this app" />
                 </ListItem>
 
                 <ListItem>
                     <ListItemAvatar>
-                        <Avatar>
+                        <Avatar style={{ backgroundColor: "#F75F4A" }}>
                             <GroupIcon />
                         </Avatar>
                     </ListItemAvatar>
-                    <ListItemText primary="Teams" secondary="You can create teams, start or join meetings and even send messages" />
+                    <ListItemText primary={<Typography variant="h6">All Channels</Typography>} secondary="You can create teams, start or join meetings and even send messages" />
                 </ListItem>
 
                 <ListItem>
                     <ListItemAvatar>
-                        <Avatar>
+                        <Avatar style={{ backgroundColor: "#F75F4A" }}>
                             <AssignmentIcon />
                         </Avatar>
                     </ListItemAvatar>
-                    <ListItemText primary="Tasks" secondary="You can manage all your tasks and todos" />
+                    <ListItemText primary={<Typography variant="h6">Tasks</Typography>} secondary="You can manage all your tasks and todos" />
                 </ListItem>
 
                 <ListItem>
                     <ListItemAvatar>
-                        <Avatar>
+                        <Avatar style={{ backgroundColor: "#F75F4A" }}>
                             <DateRangeIcon />
                         </Avatar>
                     </ListItemAvatar>
-                    <ListItemText primary="Calendar" secondary="You can keep a track of all the scheduled meetings" />
+                    <ListItemText primary={<Typography variant="h6">Calendar</Typography>} secondary="You can keep a track of all the scheduled meetings" />
                 </ListItem>
 
                 <ListItem>
                     <ListItemAvatar>
-                        <Avatar>
+                        <Avatar style={{ backgroundColor: "#F75F4A" }}>
                             <HelpIcon />
                         </Avatar>
                     </ListItemAvatar>
-                    <ListItemText primary="Help" secondary="You can use it as a guide" />
+                    <ListItemText primary={<Typography variant="h6">Help</Typography>} secondary="You can use it as a guide" />
                 </ListItem>
-                <ListItem>
-                    <ListItemAvatar>
-                        <Avatar src={process.env.PUBLIC_URL + '/images/userAdmin.svg'}/>
-                    </ListItemAvatar>
-                    <ListItemText primary="Akshith & Kaushik: Developers"/>
-                </ListItem>
-                 
             </List>
-             
         </div>
     )
 }

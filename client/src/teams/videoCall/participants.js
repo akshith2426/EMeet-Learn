@@ -81,7 +81,7 @@ const Participants = () => {
                                         />
                                     </ListItemAvatar>
                                     <ListItemText>
-                                        {participant.email}
+                                        {participant.name}
                                     </ListItemText>
                                 </ListItem>
                             ) 

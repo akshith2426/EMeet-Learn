@@ -116,7 +116,7 @@ const Chats = (props) => {
                 {/* BUTTON TO EXPORT CHAT */}
                 <Button 
                   onClick={exportChat}
-                  style={{ backgroundColor: '#464775', textTransform: 'none', color: '#ffffff', margin: '2%' }}
+                  style={{ backgroundColor: '#FEDB01', textTransform: 'none', color: '#ffffff', margin: '2%' }}
                   startIcon={<ArrowDownwardIcon/>}
                 >
                   Export Chat

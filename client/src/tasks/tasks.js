@@ -36,7 +36,7 @@ const Tasks = () => {
       //PUSHING IN USER ACTIVITY
       db.collection("users").doc(currentUser.uid).collection("activity")
       .add({
-          activity: `You added a task: ${input}!`,
+          activity: `You Added A Task: ${input}!`,
           doneAt: new Date()
       })
   
@@ -47,7 +47,7 @@ const Tasks = () => {
     return (
       <div className={classes.tasks}>
         <Typography variant='h1' className = {classes.tasksHeader}>
-          MANAGE YOUR TASKS
+          Manage Your Tasks
         </Typography>
         
         {/* FORM TO SUBMIT TODO */}
