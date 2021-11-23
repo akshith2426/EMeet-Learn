@@ -28,12 +28,13 @@ const useStyles = makeStyles((theme) => ({
     },
     
     navbarButton: {
-        backgroundColor: '#4b53bc',
+        backgroundColor: '#F75F4A',
         margin: '5px',
+        padding:'5px 20px',
         color: '#ffffff',
         textTransform: 'none',
         '&:hover': {
-            backgroundColor: '#4b53bc',
+            backgroundColor: '#F75F4A',
             textDecoration: 'underline'
         }
     },
@@ -41,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
     blueBox: {
         height: '8vh',
         width: '100vw',
-        backgroundColor: '#4b53bc',
+        backgroundColor: '#ffffff',
         [theme.breakpoints.down('md')]: {
             height: '10vh'
         }
@@ -50,6 +51,7 @@ const useStyles = makeStyles((theme) => ({
     blueTag: {
         margin: '1%',
         textAlign: 'center',
+        color:'#F75F4A'
     },
 
     /**********HOME STYLES**********/
@@ -64,12 +66,12 @@ const useStyles = makeStyles((theme) => ({
     },
 
     homeTitle: {
-        color: '#4b53bc',
+        color: '#F75F4A',
         fontWeight: 'bold'
     },
 
     tagline: {
-        color: '#000000'
+        color: '#152A43'
     },
 
     img: {
@@ -82,32 +84,34 @@ const useStyles = makeStyles((theme) => ({
     },
 
     signupButton: {
-        backgroundColor: '#4b53bc',
+        backgroundColor: '#ffffff',
+            borderColor: '#F75F4A',
+            color:'#F75F4A',
         margin: '5px',
-        color: '#ffffff',
         width: '18vw',
         borderRadius: 0,
         textTransform: 'none',
         border: '2px solid',
-        borderColor: '#ffffff',
         '&:hover': {
-            backgroundColor: '#363c90',
-            borderColor: '#f5f5f5',
+            backgroundColor: '#F75F4A',
+        borderColor: '#ffffff',
+        color: '#ffffff',
         }
     },
 
     signinButton: {
         backgroundColor: '#ffffff',
+            borderColor: '#F75F4A',
+            color:'#F75F4A',
         margin: '5px',
-        color: '#000000',
         width: '18vw',
         borderRadius: 0,
         textTransform: 'none',
         border: '2px solid',
-        borderColor: '#4b53bc',
         '&:hover': {
-            backgroundColor: '#f5f5f5',
-            borderColor: '#363c90'
+            backgroundColor: '#F75F4A',
+        borderColor: '#ffffff',
+        color: '#ffffff',
         }
     },
 
@@ -165,34 +169,36 @@ const useStyles = makeStyles((theme) => ({
     },
     
     footerSigninButton: {
-        backgroundColor: '#4b53bc',
+        backgroundColor: '#ffffff',
+            borderColor: '#F75F4A',
+            color:'#F75F4A',
         margin: '5px',
-        color: '#ffffff',
         fontWeight: 'bold',
         width: '12vw',
         borderRadius: 0,
         textTransform: 'none',
         border: '2px solid',
-        borderColor: '#ffffff',
         '&:hover': {
-            backgroundColor: '#363c90',
-            borderColor: '#f5f5f5',
+            backgroundColor: '#F75F4A',
+        borderColor: '#ffffff',
+        color: '#ffffff',
         }
     },
 
     footerSignupButton: {
         backgroundColor: '#ffffff',
+            borderColor: '#F75F4A',
+            color:'#F75F4A',
         margin: '5px',
-        color: '#4b53bc',
         fontWeight: 'bold',
         width: '12vw',
         borderRadius: 0,
         textTransform: 'none',
         border: '2px solid',
-        borderColor: '#4b53bc',
         '&:hover': {
-            backgroundColor: '#f5f5f5',
-            borderColor: '#363c90'
+            backgroundColor: '#F75F4A',
+        borderColor: '#ffffff',
+        color: '#ffffff',
         }
     },
 

@@ -19,20 +19,11 @@ const Navbar = () => {
                     <Typography variant="h6" className={classes.navbarTitle}>
                         Teams
                     </Typography>
-                    <Button className={classes.navbarButton} color="inherit" href='/signup'>Sign up</Button>
-                    <Button className={classes.navbarButton} color="inherit" href='/signin'>Sign in</Button>
+                    <Button className={classes.navbarButton} color="inherit" href='/signup'>Sign Up</Button>
+                    <Button className={classes.navbarButton} color="inherit" href='/signin'>Sign In</Button>
                 </Toolbar>
             </AppBar>
 
-            {/* MARQUEE SECTION */}
-
-            <AppBar className={classes.blueBox} elevation={0} position='static'>
-                <Marquee speed={50} gradient={false}>
-                <Typography className={classes.blueTag}>
-                    Now use Teams with family and friends to call, chat, and make plans.
-                </Typography>
-                </Marquee>
-            </AppBar>
         </div>
     );
 }
