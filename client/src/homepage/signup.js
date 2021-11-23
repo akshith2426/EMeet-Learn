@@ -51,7 +51,7 @@ const Signup = () => {
             //PUSHING IN USER ACTIVITY
             db.collection("users").doc(user.uid).collection("activity")
             .add({
-                activity: "Welcome to Teams!!",
+                activity: "Welcome to E-Meet & Learn!!",
                 doneAt: new Date()
             })
 

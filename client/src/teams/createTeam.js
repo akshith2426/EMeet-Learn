@@ -36,7 +36,7 @@ const CreateTeam = () => {
         //PUSHING IN USER ACTIVITY
         db.collection("users").doc(currentUser.uid).collection("activity")
         .add({
-            activity: `You created a team: ${name}`,
+            activity: `You Created A Channel : ${name}`,
             doneAt: new Date()
         })
 
@@ -67,14 +67,14 @@ const CreateTeam = () => {
                 
                 <Grid item xs={12} lg={3} md={6} style={{ margin: '10vh 20vw', padding: '3vw', border: '1px solid #000000' }}>
                     <Typography variant = "h5" align = "left" color = "textPrimary" style={{ margin: '2%', fontWeight: 'bold' }}>
-                        Create a Team
+                        Create A Channel
                     </Typography>
                     <form onSubmit={handleGenerateCode}>
                         {nameError && <Alert severity = "error">{nameError}</Alert>}
                        <TextField 
                             id="filled-basic" 
                             color = "primary" 
-                            placeholder = 'Enter Team Name'
+                            placeholder = 'Enter Channel Name'
                             onChange = {(e)=>{setName(e.target.value)}}
                             error = {nameError} 
                         />
@@ -87,10 +87,10 @@ const CreateTeam = () => {
                                 type = "submit" 
                                 variant = "contained" 
                                 fullWidth 
-                                style={{ marginTop: '5%', backgroundColor: '#6264a7', color: '#ffffff' }}
+                                style={{ marginTop: '5%', backgroundColor: '#FEDB01', color: '#ffffff' }}
                             >
-                                Create Team
-                            </Button>
+                                Create Channel
+                                </Button>
                         )}
                     </form>
                     <Typography 

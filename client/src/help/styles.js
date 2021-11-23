@@ -14,7 +14,10 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: '5%'
     }
   },
-
+  speechButton: {
+    margin: '10px',
+    padding:'10px'
+  },
   listRoot: {
     width: '100%',
     maxWidth: 1000,

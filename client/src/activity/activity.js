@@ -24,7 +24,7 @@ const Activity = () => {
                 variant='h4'
                 className={classes.title}
             >
-                YOUR ACTIVITY
+                Your Activity
             </Typography>
             
             {/* LIST OF ACTIVITIES */}
@@ -38,8 +38,8 @@ const Activity = () => {
                             >
                                 <img 
                                     className={classes.icon}
-                                    src={process.env.PUBLIC_URL + 'images/teams.png'}
-                                    alt='teams_logo'
+                                    src={process.env.PUBLIC_URL + 'images/activityIcon.svg'}
+                                    alt='activityIcon'
                                 />
                                 <Typography>
                                     {new Date(activity.doneAt.seconds * 1000).toLocaleDateString("en-US")},
