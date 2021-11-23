@@ -1,13 +1,11 @@
 import React from 'react';
 import useStyles from './styles';
 import { Typography, Grid, GridListTile, List, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
-import { IconButton, AppBar, Button, Container, Toolbar } from '@material-ui/core';
+import {  Button, Container } from '@material-ui/core';
 import HomeOutlinedIcon from '@material-ui/icons/HomeOutlined';
 import HomeWorkOutlinedIcon from '@material-ui/icons/HomeWorkOutlined';
 import BusinessOutlinedIcon from '@material-ui/icons/BusinessOutlined';
 import CastForEducationOutlinedIcon from '@material-ui/icons/CastForEducationOutlined';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-import TwitterIcon from '@material-ui/icons/Twitter';
 import Navbar from './navbar';
 
 const Home = () => {
@@ -15,26 +13,25 @@ const Home = () => {
 
     return (
         <>
-        {/*Navbar*/}
         <Navbar />
 
         {/*Tagline and default image*/}
 
         <div className={classes.homeRoot}>
           <Grid container spacing={0}>
-            <Grid item xs={12} sm={6} className={classes.paper} style={{backgroundColor: '#f5f5f5'}}>
+            <Grid item xs={12} sm={6} className={classes.paper} style={{backgroundColor: '#FCE38A'}}>
                 <Typography variant='h3' className={classes.homeTitle}>
-                  Teams
+                  E-Meet & Learn
                 </Typography>
                 <Typography variant='h4' className={classes.tagLine}>
                   Meet, chat, call, and collaborate in just one place.
                 </Typography>
                 <List>
                   <ListItem>
-                    <Button variant='contained' className={classes.signupButton} href='/signup'>Sign up for free</Button>
+                    <Button variant='contained' className={classes.signupButton} href='/signup'>Sign Up For Free</Button>
                   </ListItem>
                   <ListItem>
-                    <Button variant='outlined' className={classes.signinButton} href='/signin'>Sign in</Button>
+                    <Button variant='outlined' className={classes.signinButton} href='/signin'>Sign In</Button>
                   </ListItem>
                 </List>  
             </Grid>
@@ -74,31 +71,17 @@ const Home = () => {
 
           {/*About Functionalities*/}
 
-          <Typography align='center' variant='h3' style={{padding: '1%', fontWeight: 'bold', marginTop: '5vh', marginBottom: '3vh'}}>
-            CHAT - CALL - COLLABORATE
-          </Typography>
-
-          <Container maxWidth='lg'>
-            <Grid container justify='center' spacing={0}> 
-              <Grid item xs={6} md={6} lg={6}>
-                <img style={{height: '54vh', width: '47vw', padding: '0'}} src={process.env.PUBLIC_URL + 'images/collaborate.jpg'} alt="collaborate"/>
-                <img style={{height: '45vh', width: '47vw', padding: '0'}} src={process.env.PUBLIC_URL + 'images/call.jpg'} alt="call"/>
-              </Grid>
-              <Grid item xs={6} md={6} lg={6}>
-                <img style={{height: '100vh', width: '43vw'}} src={process.env.PUBLIC_URL + 'images/chat.jpg'} alt="chat"/>
-              </Grid>
-            </Grid>
-          </Container>
+          
           
           {/*Home, Business, Enterprise and Education Section*/}
 
-          <Grid container spacing={0} style={{backgroundColor: '#4b53bc', marginTop: '5%'}}>
+          <Grid container spacing={0} style={{backgroundColor: '#F75F4A', marginTop: '5%'}}>
             <Grid item xs={12} sm={6} className={classes.paper}>
               <Typography variant='h4' style={{fontWeight: 'medium', color: '#ffffff'}}>
                 Get started with Teams today
               </Typography>
-              <Button variant='contained' className={classes.footerSignupButton} href='/signup'>Sign up for free</Button>
-              <Button variant='outlined' className={classes.footerSigninButton} href='/signin'>Sign in</Button>   
+              <Button variant='contained' className={classes.footerSignupButton} href='/signup'>Sign Up For Free</Button>
+              <Button variant='outlined' className={classes.footerSigninButton} href='/signin'>Sign In</Button>   
             </Grid>
             <Grid item xs={12} sm={6}>
               <List component='nav'>
