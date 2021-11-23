@@ -17,7 +17,7 @@ const Navbar = () => {
                     <img className={classes.logo} src={process.env.PUBLIC_URL + 'images/teams.png'} alt="logo"/>
                     <img src={process.env.PUBLIC_URL + 'images/vertical.png'} alt="vertical_line"/>
                     <Typography variant="h6" className={classes.navbarTitle}>
-                        Teams
+                        E-Meet & Learn
                     </Typography>
                     <Button className={classes.navbarButton} color="inherit" href='/signup'>Sign Up</Button>
                     <Button className={classes.navbarButton} color="inherit" href='/signin'>Sign In</Button>

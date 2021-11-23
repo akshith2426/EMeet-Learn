@@ -86,20 +86,19 @@ const Teams = () => {
                                 <Link to={`/teams/${team.code}`} className={classes.link}>
                                 <div className={classes.paper}>
                                     <div align='center' style={{ margin: '3%' }}>
-                                        <Avatar value={team.name} size='90' textSizeRatio={1.75}/>
+                                        <Avatar value={team.name.substring(0,3)} size='90' textSizeRatio={2.15}/>
                                     </div>
                                     <Typography
                                         align='center'
                                         variant='subtitle1'  
                                     >
-                                        Created on {new Date(team.createdAt.seconds * 1000).toLocaleDateString("en-US")}, 
-                                        at {new Date(team.createdAt.seconds * 1000).getHours()}:{new Date(team.createdAt.seconds * 1000).getMinutes()} hrs
+                                        {team.name} 
                                     </Typography>
                                     <Typography
                                         align='center'
                                         variant='subtitle2'
                                     >
-                                        by {team.creatorEmail}
+                                        By {team.creatorEmail}
                                     </Typography>
                                 </div>
                                 </Link>
