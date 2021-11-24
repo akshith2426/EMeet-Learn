@@ -6,7 +6,7 @@ import clsx from 'clsx';
 import useStyles from './styles';
 import { useTheme } from '@material-ui/core/styles';
 import { Drawer, AppBar, Toolbar, List, Typography, CssBaseline, IconButton, ListItem, ListItemIcon, ListItemText, Menu, MenuItem,
-  Divider, InputBase, Tooltip } from '@material-ui/core';
+  Divider, Tooltip } from '@material-ui/core';
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
@@ -15,7 +15,6 @@ import MessageIcon from '@material-ui/icons/Message';
 import GroupIcon from '@material-ui/icons/Group';
 import DateRangeIcon from '@material-ui/icons/DateRange';
 import AssignmentIcon from '@material-ui/icons/Assignment';
-import SearchIcon from '@material-ui/icons/Search';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import VolumeDownIcon from '@material-ui/icons/VolumeDown';
 import HelpIcon from '@material-ui/icons/Help';
@@ -67,21 +66,21 @@ const Navbar = () => {
 
   const renderMenu = (
     <Menu anchorEl={anchorEl} anchorOrigin={{ vertical: 'top', horizontal: 'right' }} id={menuId} keepMounted transformOrigin={{ vertical: 'top', horizontal: 'right' }} open={isMenuOpen} onClose={handleMenuClose} >
-        {
-            users.map(
-                (user)=>{
-                    if(user.uid === currentUser.uid)
-                        return (<MenuItem onClick={handleMenuClose} key={user.uid}>{user.name}</MenuItem>)
-                }
-            )
-        }
+        <MenuItem>Profile</MenuItem>
         {/* LOGOUT USER */}
         <MenuItem onClick={()=>{handleLogout();}}>Logout</MenuItem>
     </Menu>
   );
-
+  var userName = "";
+  users.map(
+    (user) => {
+      if (user.uid === currentUser.uid) {
+        userName = user.name;
+      }
+    }
+  );
   //TEXT FOR VOICE ASSISTANT OF GUIDE SECTION
-  const text = "Hello user!You can utilize this sidebar to navigate through the various features of this app!Try all of these and enjoy! Do share your feedback in the community chat section! Thank you!";
+  const text = `Hello ${userName} !You can utilize this sidebar to navigate through the various features of this app!Please go to Help Menu for more options`;
 
   return (
     <div className={classes.navbarRoot}>
@@ -95,7 +94,7 @@ const Navbar = () => {
       >
         <Toolbar>
           <IconButton
-            color="inherit"
+            color="#152A43"
             aria-label="open drawer"
             onClick={handleDrawerOpen}
             edge="start"
@@ -108,7 +107,7 @@ const Navbar = () => {
           <Typography variant="h6" noWrap className={classes.titleText}>
             E-Meet & Learn
           </Typography>
-
+          
 
           {/* USER INFORMATION */}
           <div className={classes.grow} />
@@ -125,7 +124,10 @@ const Navbar = () => {
                     }
                 )
               }
-            </div>
+          </div>
+          <Typography variant="h6" noWrap className={classes.userNameNavbar}>
+            {userName}
+          </Typography>
         </Toolbar>
       </AppBar>
 
@@ -151,56 +153,56 @@ const Navbar = () => {
         </div>
         <Divider />
 
-        <List>
+        <List  >
             <ListItem button component='a' href='/activity'>
               <Tooltip title='Activity' placement='right'>
                 <ListItemIcon className={classes.icons}>
-                  <NotificationsIcon/>
+                  <NotificationsIcon style={{ color: "#FFFFFF" }}/>
                 </ListItemIcon>
               </Tooltip>
-              <ListItemText>Activity</ListItemText>
+              <ListItemText style={{ color: "#FFFFFF" }}>Activity</ListItemText>
             </ListItem>
 
             <ListItem button component='a' href='/chat'>
               <Tooltip title='Community Chat' placement='right'>
                 <ListItemIcon className={classes.icons}>
-                  <MessageIcon/>
+                  <MessageIcon style={{ color: "#FFFFFF" }} />
                 </ListItemIcon>
               </Tooltip>
-              <ListItemText>Community Chat</ListItemText>
+              <ListItemText style={{ color: "#FFFFFF" }}>Community Chat</ListItemText>
             </ListItem>
 
             <ListItem button component='a' href='/teams'>
-              <Tooltip title='Teams' placement='right'>
+              <Tooltip title='Channels' placement='right'>
                 <ListItemIcon className={classes.icons}>
-                  <GroupIcon/>
+                  <GroupIcon style={{ color: "#FFFFFF" }}/>
                 </ListItemIcon>
               </Tooltip>
-              <ListItemText>Teams</ListItemText>
+              <ListItemText style={{ color: "#FFFFFF" }}>Channels</ListItemText>
             </ListItem>
 
             <ListItem button component='a' href='/tasks'>
               <Tooltip title='Tasks' placement='right'>
                 <ListItemIcon className={classes.icons}>
-                  <AssignmentIcon/>
+                  <AssignmentIcon style={{ color: "#FFFFFF" }}/>
                 </ListItemIcon>
               </Tooltip>
-              <ListItemText>Tasks</ListItemText>
+              <ListItemText style={{ color: "#FFFFFF" }}>Tasks</ListItemText>
             </ListItem>
 
             <ListItem button component='a' href='/calendar'>
               <Tooltip title='Calendar' placement='right'>
                 <ListItemIcon className={classes.icons}>
-                  <DateRangeIcon/>
+                  <DateRangeIcon style={{ color: "#FFFFFF" }}/>
                 </ListItemIcon>
               </Tooltip>
-              <ListItemText>Calendar</ListItemText>
+              <ListItemText style={{ color: "#FFFFFF" }}>Calendar</ListItemText>
             </ListItem>
 
             <ListItem button >
               <Tooltip title='Guide' placement='right'>
                 <ListItemIcon className={classes.icons}>
-                  <VolumeDownIcon/>
+                  <VolumeDownIcon style={{ color: "#FFFFFF" }}/>
                   <Speech 
                     text={text}
                     voice="Google UK English Female"
@@ -208,27 +210,27 @@ const Navbar = () => {
                   />
                 </ListItemIcon>
               </Tooltip>
-              <ListItemText>Guide</ListItemText>
+              <ListItemText style={{ color: "#FFFFFF" }}>Guide</ListItemText>
             </ListItem>
 
             <ListItem button component='a' href='/'>
               <Tooltip title='Help' placement='right'>
                 <ListItemIcon className={classes.icons}>
-                  <HelpIcon/>
+                  <HelpIcon style={{ color: "#FFFFFF" }}/>
                 </ListItemIcon>
               </Tooltip>
-              <ListItemText>Help</ListItemText>
+              <ListItemText style={{ color: "#FFFFFF" }} >Help</ListItemText>
             </ListItem>
 
             <Divider />
 
             <ListItem button onClick={handleLogout}>
               <Tooltip title='Logout' placement='right'>
-                <ListItemIcon className={classes.logoutIcon}>
-                  <ExitToAppIcon/>
+                <ListItemIcon >
+                  <ExitToAppIcon style={{ color: "#000000" }}/>
                 </ListItemIcon>
               </Tooltip>
-              <ListItemText>Log out</ListItemText>
+              <ListItemText style={{ color: "#FFFFFF" }}>Log out</ListItemText>
             </ListItem>
         </List>
       </Drawer>

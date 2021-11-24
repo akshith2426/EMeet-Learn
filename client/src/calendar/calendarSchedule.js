@@ -32,7 +32,7 @@ const CalendarSchedule = () => {
                 variant='h4'
                 className={classes.title}
             >
-                YOUR CALENDAR
+                Your Calendar Schedule
             </Typography>
 
             {/* CALENDAR */}
@@ -67,7 +67,7 @@ const CalendarSchedule = () => {
                                             })}
                                     >
                                         <Button 
-                                            style={{ backgroundColor: '#464775', color: '#ffffff' }}
+                                            style={{ backgroundColor: '#FEDB01', color: '#ffffff' }}
                                             onClick={(e) => history.push(`/room/${meeting.code}`)}>
                                             Join
                                         </Button>

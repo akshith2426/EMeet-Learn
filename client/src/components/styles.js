@@ -15,32 +15,6 @@ const useStyles = makeStyles((theme) => ({
     }
   },
 
-  search: {
-    position: 'relative',
-    borderRadius: theme.shape.borderRadius,
-    backgroundColor: "#dadae3",
-    '&:hover': {
-      backgroundColor: "#dadae3",
-    },
-    marginRight: theme.spacing(2),
-    marginLeft: 0,
-    width: '100%',
-    [theme.breakpoints.up('sm')]: {
-      marginLeft: theme.spacing(15),
-      width: '50%',
-    },
-  },
-
-  searchIcon: {
-    padding: theme.spacing(0, 2),
-    height: '100%',
-    position: 'absolute',
-    pointerEvents: 'none',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    color: '#929295'
-  },
 
   inputRoot: {
     color: '#50538d',
@@ -61,7 +35,9 @@ const useStyles = makeStyles((theme) => ({
       }
     },
   },
-
+  userNameNavbar: {
+    marginLeft: '10px',
+  },
   grow: {
     flexGrow: 1,
   },
@@ -87,15 +63,6 @@ const useStyles = makeStyles((theme) => ({
     }
   },
 
-  logoutIcon: {
-    color: '#9d2f42',
-    '&:hover': {
-        color: '#9d2f42'
-    },
-    '&:selected': {
-        color: '#9d2f42'
-    }
-  },
 
   navbarRoot: {
       display: 'flex',
@@ -103,7 +70,8 @@ const useStyles = makeStyles((theme) => ({
 
   navbar: {
     zIndex: theme.zIndex.drawer + 1,
-    backgroundColor: "#353837",
+
+    backgroundColor: "#F75F4A",
     transition: theme.transitions.create(['width', 'margin'], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -131,7 +99,7 @@ const useStyles = makeStyles((theme) => ({
     width: drawerWidth,
     flexShrink: 0,
     whiteSpace: 'nowrap',
-    backgroundColor: '#ebebeb'
+    backgroundColor: '#F75F4A'
   },
 
   drawerOpen: {
@@ -140,7 +108,7 @@ const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
     }),
-    backgroundColor: 'white'
+    backgroundColor: '#F75F4A'
   },
 
   drawerClose: {
@@ -153,7 +121,7 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.up('sm')]: {
       width: theme.spacing(8) + 1,
     },
-    backgroundColor: '#ebebeb',
+    backgroundColor: '#F75F4A',
   },
 
   toolbar: {
