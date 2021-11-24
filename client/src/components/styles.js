@@ -103,7 +103,7 @@ const useStyles = makeStyles((theme) => ({
 
   navbar: {
     zIndex: theme.zIndex.drawer + 1,
-    backgroundColor: "#464775",
+    backgroundColor: "#353837",
     transition: theme.transitions.create(['width', 'margin'], {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
@@ -140,7 +140,7 @@ const useStyles = makeStyles((theme) => ({
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.enteringScreen,
     }),
-    backgroundColor: '#ebebeb'
+    backgroundColor: 'white'
   },
 
   drawerClose: {
