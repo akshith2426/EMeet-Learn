@@ -117,11 +117,13 @@ const useStyles = makeStyles((theme) => ({
 
     /**********SIGNUP AND SIGNIN STYLES**********/
     signin:{
+        paddingTop:"40px",
         margin: "10vh auto",
         padding: 10,
         height: '80vh',
+        borderRadius: '15px',
         width: '30vw',
-        backgroundColor: '#ffffff',
+        backgroundColor: '#f7f5f5',
         [theme.breakpoints.down('md')]: {
             width: '50vw'
         },
@@ -138,15 +140,17 @@ const useStyles = makeStyles((theme) => ({
     textField: {
         marginTop: "10px",
         width: '100%',
-        height: '5%'
+        height: '3%'
     },
 
     signup:{
-        margin: "5vh auto",
+        paddingTop:"40px",
+        margin: "12vh auto",
         padding: 10,
-        height: '90vh',
+        height: '78vh',
+        borderRadius: '15px',
         width: '30vw',
-        backgroundColor: '#ffffff',
+        backgroundColor: '#f7f5f5',
         [theme.breakpoints.down('md')]: {
             width: '50vw'
         },
@@ -156,11 +160,16 @@ const useStyles = makeStyles((theme) => ({
     },
 
     buttonSignup: {
-        marginTop: '2%'
+        marginTop: '4%',
+        padding: '6px',
+        fontSize:'20px',
     },
 
     buttonSignin: {
-        marginTop: '2%'
+        marginTop: '4%',
+        marginBottom: '4%',
+        padding: '6px',
+        fontSize:'20px',
     },
 
     image: {

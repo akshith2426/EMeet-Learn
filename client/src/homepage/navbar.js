@@ -14,7 +14,7 @@ const Navbar = () => {
 
             <AppBar className={classes.navbar} elevation={0} position="static">
                 <Toolbar>
-                    <img className={classes.logo} src={process.env.PUBLIC_URL + 'images/teams.png'} alt="logo"/>
+                    <img className={classes.logo} src={process.env.PUBLIC_URL + 'images/icon.png'} alt="logo"/>
                     <img src={process.env.PUBLIC_URL + 'images/vertical.png'} alt="vertical_line"/>
                     <Typography variant="h6" className={classes.navbarTitle}>
                         E-Meet & Learn

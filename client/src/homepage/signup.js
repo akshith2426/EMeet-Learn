@@ -75,22 +75,22 @@ const Signup = () => {
        <main>
             <Grid 
                 container 
-                style={{background: 'linear-gradient(to right bottom, #eee7cc, #dbe3e9)'}}
+                style={{background: '#91a0e3'}}
             >
                 <Grid 
                     item 
                     className={classes.signup}
                 >
-                    <img 
+                    {/* <img 
                         className={classes.bigLogo} 
-                        src={process.env.PUBLIC_URL + 'images/teams.png'} 
+                        src={process.env.PUBLIC_URL + 'images/out.svg'} 
                         alt="ms_logo"
-                    />
+                    /> */}
                     <Typography 
-                        variant = "h5" 
-                        align = "left" 
-                        color = "textPrimary" 
-                        fontWeight="bold" 
+                        variant = "h3" 
+                        align = "center" 
+                        color = "textprimary" 
+                        fontWeight="bolder" 
                         gutterBottom
                     >
                         Sign up
@@ -148,7 +148,7 @@ const Signup = () => {
                     </form>
                     
                     <p>
-                        <Typography variant = "h7"  color = "textPrimary" family = "Roboto" gutterBottom>
+                        <Typography variant = "h6"  color = "textPrimary" family = "Roboto" gutterBottom>
                             Already a user?
                             <Link href = "/signin"> Sign in </Link>
                             instead     

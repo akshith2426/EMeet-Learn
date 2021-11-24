@@ -70,6 +70,7 @@ const useStyles = makeStyles((theme) => ({
 
   navbar: {
     zIndex: theme.zIndex.drawer + 1,
+
     backgroundColor: "#F75F4A",
     transition: theme.transitions.create(['width', 'margin'], {
       easing: theme.transitions.easing.sharp,
