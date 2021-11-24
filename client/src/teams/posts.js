@@ -50,9 +50,9 @@ const Posts = () => {
                                         })}
                                     >
                                         <Button 
-                                            style={{ backgroundColor: '#464775', color: '#ffffff' }}
+                                            style={{ backgroundColor: '#FEDB01', color: '#ffffff' }}
                                             onClick={(e) => history.push(`/room/${meeting.code}`)}>
-                                            Join
+                                            Join Now
                                         </Button>
                                     </div>
                                 </div>

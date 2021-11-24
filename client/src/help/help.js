@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { db } from '../firebase';
 import { useAuth } from '../contexts/AuthContext';
 import useStyles from './styles';
-import { Typography,Button, List, ListItem, ListItemAvatar, Avatar, ListItemText } from '@material-ui/core';
+import { Typography, List, ListItem, ListItemAvatar, Avatar, ListItemText } from '@material-ui/core';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import MessageIcon from '@material-ui/icons/Message';
 import GroupIcon from '@material-ui/icons/Group';

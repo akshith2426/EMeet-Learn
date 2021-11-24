@@ -61,15 +61,13 @@ const Chat = () => {
         doc.text(i, 20, "Meeting Chats");
         doc.setFontSize('10');
         
-        chats.map(
-          (chat)=>{
-            doc.text(i, j, chat.senderEmail.substring(0, chat.senderEmail.indexOf('@')));
-            doc.text(i+110, j, '-')
-            doc.text(i+115, j, chat.message);
-            j = j+20;
-          }
-        )
-        doc.save("meeting_chat.pdf");
+        for (var m = 0; m < chats.length;m++){
+            doc.text(i, j, chats[m].senderEmail.substring(0, chats[m].senderEmail.indexOf('@')));
+                doc.text(i + 110, j, '-')
+                doc.text(i + 115, j, chats[m].message);
+                    j = j + 20;
+        }
+        doc.save("Meeting_Chat.pdf");
     }
 
     return (

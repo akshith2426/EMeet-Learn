@@ -43,7 +43,7 @@ const Chat = () => {
           variant='h4'
           className={classes.title}
       >
-          COMMUNITY POSTS
+          Community Posts
       </Typography>
       <List>
         <ListItem
@@ -61,9 +61,9 @@ const Chat = () => {
                 onChange = {(e)=>{setMessage(e.target.value)}}
                 className={classes.textField}  
             />
-            <Button
+            <Button style={{backgroundColor: 'transparent'}}
               type='submit'
-              startIcon={<SendIcon style={{ fontSize: '2rem', color: '#ffffff' }}/>}
+              startIcon={<SendIcon style={{ fontSize: '2rem', color: '#0eff00' }}/>}
             />
           </form>
 

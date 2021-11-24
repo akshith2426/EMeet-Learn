@@ -93,7 +93,7 @@ class Board extends React.Component {
             ctx.closePath();
             ctx.stroke();
 
-            if(root.timeout != undefined) 
+            if(root.timeout !== undefined) 
                 clearTimeout(root.timeout);
             
                 root.timeout = setTimeout(function(){

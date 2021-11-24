@@ -1,7 +1,6 @@
 import React from 'react';
 import useStyles from './styles';
 import { AppBar, Toolbar, Typography, Button } from '@material-ui/core';
-import Marquee from "react-fast-marquee";
 
 const Navbar = () => {
 

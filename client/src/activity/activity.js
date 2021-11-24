@@ -31,16 +31,17 @@ const Activity = () => {
             <List>
             {
                 activities.map(
-                    (activity)=>{ 
+                    (activity,index)=>{ 
                         return (
                             <ListItem
                                 className={classes.posts}
                             >
-                                <img 
+                                    <img 
                                     className={classes.icon}
-                                    src={process.env.PUBLIC_URL + 'images/activityIcon.svg'}
+                                    src={process.env.PUBLIC_URL + 'images/timecard.svg'}
                                     alt='activityIcon'
                                 />
+                                
                                 <Typography>
                                     {new Date(activity.doneAt.seconds * 1000).toLocaleDateString("en-US")},
                                     {new Date(activity.doneAt.seconds * 1000).getHours()}:{new Date(activity.doneAt.seconds * 1000).getMinutes()}

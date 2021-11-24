@@ -61,7 +61,7 @@ const Chats = (props) => {
           doc.text(i, j, chat.senderEmail.substring(0, chat.senderEmail.indexOf('@')));
           doc.text(i+110, j, '-')
           doc.text(i+115, j, chat.message);
-          j = j+20;
+          j = j + 20;
         }
       )
       doc.save("meeting_chat.pdf");

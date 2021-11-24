@@ -3,9 +3,11 @@ import clsx from 'clsx';
 import { db } from '../../firebase';
 import { useLocation } from 'react-router';
 import { makeStyles } from '@material-ui/core/styles';
-import { IconButton, Drawer, List, ListItem, Divider, Typography, ListItemAvatar, ListItemText, Tooltip } from '@material-ui/core';
+import { IconButton,Button, Drawer, List, ListItem, Divider, Typography, ListItemAvatar, ListItemText, Tooltip } from '@material-ui/core';
 import PeopleIcon from '@material-ui/icons/People';
 import Avatar from 'react-avatar';
+import jsPDF from 'jspdf';
+import ArrowDownwardIcon from '@material-ui/icons/ArrowDownward';
 
 const useStyles = makeStyles({
     
@@ -52,9 +54,24 @@ const Participants = () => {
 
       setState({ ...state, [anchor]: open });
     };
+    //FUNCTION TO EXPORT MEETING PARTICIPANTS LIST
+    const exportParticipantsList = () => {
+        var doc = new jsPDF('p', 'pt');
+        var i = 20
+        var j = 30
+        doc.setFontSize('15');
+        doc.text(i, 20, "Participants List");
+        doc.setFontSize('10');
+        
+        for (var m = 0; m < participants.length;m++){
+            doc.text(i + 20, j, participants[m].email);
+                j = j + 20;
+        }
+        doc.save("Meeting_Participants_List.pdf");
+    }
 
     // DISPLAYING LIST OF PARTICIPANTS
-
+    
     const list = (anchor) => (
         <div
             className={clsx(classes.list, {
@@ -66,6 +83,10 @@ const Participants = () => {
         >
             <List>
                 <Typography variant='h5'>PARTICIPANTS</Typography>
+                <Button onClick={exportParticipantsList} style={{ backgroundColor: '#464775', textTransform: 'none', color: '#ffffff', margin: '2%' }}
+                      startIcon={<ArrowDownwardIcon/>}>
+                    Meeting Participants
+                </Button>
                 <Divider />
                 {
                     participants.map(
@@ -81,7 +102,7 @@ const Participants = () => {
                                         />
                                     </ListItemAvatar>
                                     <ListItemText>
-                                        {participant.name}
+                                        {participant.email}
                                     </ListItemText>
                                 </ListItem>
                             ) 

@@ -16,9 +16,8 @@ const useStyles = makeStyles((theme) => ({
   },
 
   createPost: {
-    border: '1px solid #c4c4c4',
+    border: 'none',
     marginBottom: '2%',
-    backgroundColor: '#464775',
     width: '80vw',
     [theme.breakpoints.down('sm')]: {
       marginLeft: '5%'
